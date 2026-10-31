@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Música</title>
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Elemento de Audio de HTML5 -->
+    <audio id="audio-player"></audio>
+
+    <div class="player-container">
+        <!-- Encabezado -->
+        <header class="player-header">
+            <h2>Mi Reproductor</h2>
+            <!-- Input para cargar archivos locales -->
+            <label for="file-input" class="btn-upload">
+                + Cargar Canciones
+            </label>
+            <input type="file" id="file-input" multiple accept="audio/*" hidden>
+        </header>
+
+        <!-- Seccion Visual / caratula -->
+        <div class="album-cover-container">
+            <div class="album-cover" id="album-cover">
+                <div class="center-hole"></div>
+            </div>
+        </div>
+
+        <!-- Información de la canción actual -->
+        <div class="song-info">
+            <h3 id="song-title">Sin canciones cargadas</h3>
+            <p id="song-artist">Selecciona archivos de audio</p>
+        </div>
+
+        <!-- Barra de progreso -->
+        <div class="progress-section">
+            <div class="progress-bar-container" id="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="time-info">
+                <span id="current-time">0:00</span>
+                <span id="total-duration">0:00</span>
+            </div>
+        </div>
+
+        <!-- Botones de Control -->
+        <div class="controls">
+            <button id="btn-prev" class="btn-control" title="Anterior">⏮</button>
+            <button id="btn-play" class="btn-control btn-play" title="Reproducir/Pausar">▶</button>
+            <button id="btn-next" class="btn-control" title="Siguiente">⏭</button>
+        </div>
+
+        <!-- Monitor de Nodos (Demostración de la Lista Circular para la profe) -->
+        <div class="nodes-info">
+            <div class="node-box">
+                <span class="node-label">Nodo Anterior:</span>
+                <span id="prev-node-text" class="node-value">-</span>
+            </div>
+            <div class="node-box">
+                <span class="node-label">Nodo Siguiente:</span>
+                <span id="next-node-text" class="node-value">-</span>
+            </div>
+        </div>
+
+        <!-- Lista de Reproduccion -->
+        <div class="playlist-section">
+            <h4>Lista de Reproducción</h4>
+            <ul id="playlist" class="playlist">
+                <li class="empty-list">No hay canciones en la lista</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Enlace a JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+/* Configuración básica y paleta de colores pastel */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f7eff6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #4a4a4a;
+    padding: 20px;
+}
+
+/* Tarjeta Principal */
+.player-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 380px;
+    padding: 25px;
+    border-radius: 24px;
+    box-shadow: 0 8px 20px rgba(220, 190, 215, 0.4);
+    border: 1px solid #f0e2ed;
+}
+
+/* Encabezado */
+.player-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.player-header h2 {
+    font-size: 1.1rem;
+    color: #7b587a;
+}
+
+.btn-upload {
+    background-color: #e8d5e5;
+    color: #6b436a;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-upload:hover {
+    background-color: #dfc8dd;
+}
+
+/* Ilustración de Carátula */
+.album-cover-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.album-cover {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #fbcfe8, #e9d5ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 6px solid #f8fafc;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.center-hole {
+    width: 35px;
+    height: 35px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 3px solid #e9d5ff;
+}
+
+/* Información de la canción */
+.song-info {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.song-info h3 {
+    font-size: 1rem;
+    color: #333333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.song-info p {
+    font-size: 0.8rem;
+    color: #9c849e;
+    margin-top: 4px;
+}
+
+/* Barra de Progreso */
+.progress-section {
+    margin-bottom: 20px;
+}
+
+.progress-bar-container {
+    background-color: #f3e8f2;
+    height: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: #c084fc;
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+    transition: width 0.1s linear;
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #a38ca4;
+    margin-top: 6px;
+}
+
+/* Botones de Control */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn-control {
+    background-color: #f5ebf4;
+    border: none;
+    color: #7b587a;
+    font-size: 1.1rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-control:hover {
+    background-color: #ebd3e9;
+}
+
+.btn-play {
+    background-color: #d8b4fe;
+    color: #ffffff;
+    width: 52px;
+    height: 52px;
+    font-size: 1.3rem;
+}
+
+.btn-play:hover {
+    background-color: #c084fc;
+}
+
+/* Cuadro Informativo de Nodos (Punteros) */
+.nodes-info {
+    display: flex;
+    gap: 10px;
+    background-color: #faf5f9;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px dashed #e2cfe0;
+    margin-bottom: 15px;
+}
+
+.node-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.75rem;
+    overflow: hidden;
+}
+
+.node-label {
+    font-weight: bold;
+    color: #8a6589;
+}
+
+.node-value {
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Lista de Reproducción */
+.playlist-section h4 {
+    font-size: 0.85rem;
+    color: #7b587a;
+    margin-bottom: 8px;
+}
+
+.playlist {
+    list-style: none;
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.playlist li {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 4px;
+    background-color: #fdfafc;
+    color: #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.playlist li:hover {
+    background-color: #f3e8f2;
+}
+
+.playlist li.active {
+    background-color: #e9d5ff;
+    color: #5b21b6;
+    font-weight: 600;
+}
+
+.empty-list {
+    text-align: center;
+    color: #b09cb1;
+    font-style: italic;
+}
